@@ -37,6 +37,7 @@
         .contato {
             margin-top: 30px;
             font-size: 16px;
+            display: none; /* Oculto inicialmente */
         }
         .botao {
             margin-top: 20px;
@@ -49,18 +50,23 @@
             font-size: 16px;
         }
     </style>
+    <script>
+        function mostrarContato() {
+            document.getElementById("contatoVovo").style.display = "block";
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <div class="alerta">🚨 ALERTA DE DESAPARECIMENTO 🚨</div>
         <div class="mensagem">
-            Se eu não der notícias por mais de uma semana, por favor, entre em contato com minha avó.
+            Oi Gui, você só deve apertar o botão se eu fiquei ausente por mais de 1 semana. Caso contrário, não aperte.
         </div>
-        <div class="contato">
+        <button class="botao" onclick="mostrarContato()">Contato Emergencial</button>
+        <div id="contatoVovo" class="contato">
             <strong>Contato da minha vó:</strong><br>
-            Telefone: (XX) XXXX-XXXX
+            Telefone: (27) 99810-3598
         </div>
-        <button class="botao" onclick="alert('Entre em contato com a minha vó caso eu suma!')">Contato Emergencial</button>
     </div>
 </body>
 </html>
