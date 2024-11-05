@@ -3,32 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com Fundo Pixelado</title>
+    <title>Alerta de Sumiço</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
+            background: url('caminho-da-imagem.jpeg') no-repeat center center fixed;
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: url('caminho-para-sua-imagem.jpeg') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-            text-align: center;
+            margin: 0;
+            color: #660000;
         }
         .container {
-            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+            border: 2px solid #660000;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 90%;
+        }
+        .alerta {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+        .mensagem {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .contato {
+            margin-top: 30px;
+            font-size: 16px;
+            display: none; /* Oculto inicialmente */
+        }
+        .botao {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
         }
     </style>
+    <script>
+        function mostrarContato() {
+            document.getElementById("contatoVovo").style.display = "block";
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1>Bem-vindo!</h1>
-        <p>Esta é uma página com um fundo pixelado.</p>
+        <div class="alerta">🚨 ALERTA DE DESAPARECIMENTO 🚨</div>
+        <div class="mensagem">
+            Oi Gui, você só deve apertar o botão se eu fiquei ausente por mais de 1 semana. Caso contrário, não aperte.
+        </div>
+        <button class="botao" onclick="mostrarContato()">Contato Emergencial</button>
+        <div id="contatoVovo" class="contato">
+            <strong>Contato da minha vó:</strong><br>
+            Telefone: (27) 99810-3598
+        </div>
     </div>
 </body>
 </html>
